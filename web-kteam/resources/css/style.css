@@ -1,0 +1,484 @@
+/* -------------------------------------------- */
+
+/* ---------------DEFAULT SETUP---------------- */
+
+/* -------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------- */
+
+/* -------------REUSABLE COMPONENT------------- */
+
+/* -------------------------------------------- */
+
+.clearfix {
+    visibility: hidden;
+    content: " ";
+    clear: both;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #d35400;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    display: inline-block;
+    width: 190px;
+    text-align: center;
+    transition: all .3s;
+    font-weight: 700;
+    font-size: 110%;
+}
+
+.btn:hover {
+    background-color: #e63e22;
+    cursor: pointer;
+}
+
+.row {
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 300%;
+    font-weight: 400;
+    word-spacing: 5px;
+    color: white;
+    line-height: 135%;
+    margin-bottom: 40px;
+}
+
+h2 {
+    padding-top: 60px;
+    color: #e67e22;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+}
+
+section {}
+
+/* ------------------------------------------- */
+
+/* ------------------HEADER------------------- */
+
+/* ------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(2, 33, 64, 0.3), rgba(45, 95, 93, 0.8)), url("../images/bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+header>a {
+    display: block;
+}
+
+.logo {
+    width: 350px;
+    height: 50px;
+    margin: 55px 0 70px 70px;
+    float: left;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-right: 50px;
+    margin-top: 55px;
+    margin-bottom: 70px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 50px;
+    color: white;
+    font-size: 110%;
+    font-weight: 700;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    transition: border-bottom 0.13s;
+    padding: 3px 0;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+    border-bottom: 2px solid white;
+}
+header .row{
+    margin-top: 0;
+}
+.heading-main-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-75%, -50%);
+    max-width: 1140px;
+}
+/* -------------STICKY------------ */
+.sticky{
+    background-color: rgba(2,33,64,.9);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 900;
+}
+.sticky .main-nav{
+    margin-top: 35px;
+}
+.sticky .logo{
+    margin-top: 20px;
+}
+/* ----------------------------------------------- */
+
+/* --------------------ABOUT SECTION-------------- */
+
+/* ----------------------------------------------- */
+
+h2::after {
+    content: " ";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #e48736b9;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+.p-long {
+    text-align: center;
+    color: #265077;
+    font-size: 22px;
+    margin-top: 45px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+    margin-bottom: 50px;
+}
+
+.about-picture {
+    position: relative;
+}
+
+.about-picture img {
+    width: 90%;
+    border-radius: 30px;
+    border: 4px solid rgb(186, 186, 207);
+    box-shadow: 1px 1px 10px 5px rgb(82, 82, 226);
+    transition: all.5s;
+}
+
+.about-picture:hover img, .about-picture:active img {
+    filter: blur(1px) brightness(60%);
+}
+
+.pic-title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, 150%);
+    transition: all .5s;
+    color: #c2e1fd;
+    opacity: 0;
+}
+
+.about-picture:hover .pic-title, .about-picture:active .pic-title {
+    transform: translate(-65%, -50%);
+    opacity: 1;
+}
+
+/* ----------------------------------------- */
+
+/* -------------------PRODUCTS-------------- */
+
+/* ----------------------------------------- */
+
+.products-section {
+    background-color: #F4F4F4;
+}
+
+.product-detail {
+    width: 90%;
+    height: 350px;
+    background-color: #EEEFFF;
+    box-shadow: 3px 5px 10px rgb(125, 125, 160);
+}
+
+.product-detail h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+    background-color: #265077;
+    text-align: center;
+    color: #EEEFFF;
+    padding-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box {
+    margin-left: 18%;
+}
+
+p.price {
+    margin: 20px auto;
+    font-size: 260%;
+    font-weight: 400;
+    color: #265077;
+}
+
+.price span {
+    font-size: 80%;
+}
+
+.descript {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------- */
+
+/* ----------------TESTIMONIALS------------------- */
+
+/* ----------------------------------------------- */
+
+.testimonials-section {
+    background-image: linear-gradient(rgba(2, 33, 64, 0.7), rgba(45, 95, 93, 0.7)), url("../images/bg-2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    background-attachment: fixed;
+}
+
+.testimonials-section .row {
+    font-style: italic;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+blockquote {
+    font-family: 'Nunito', sans-serif;
+    line-height: 140%;
+    width: 94%;
+    font-weight: 400;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+blockquote::before {
+    content: "\0022";
+    display: block;
+    font-size: 350%;
+    font-family: 'Nunito', sans-serif;
+}
+
+blockquote cite {
+    margin-top: 8px;
+    display: block;
+    color: #94ACDE;
+}
+
+blockquote cite img {
+    margin-right: 4px;
+    height: 50px;
+    border: 2px solid rgb(137, 137, 199);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* --------------------------------------- */
+
+/* --------------SPONSORS---------------- */
+
+/* -------------------------------------- */
+
+.sponsors-section {
+    background-color: #E0E0E0;
+    padding-bottom: 80px;
+}
+
+.sponsors-section h2 {
+    margin-bottom: 50px;
+}
+
+.sponsors-list {
+    margin-left: 8.8%;
+}
+
+.sponsor {
+    margin-top: 30px;
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    color: #265994;
+    font-weight: 700;
+    font-size: 130%;
+}
+
+.sponsor img {
+    height: 130px;
+    transition: all 0.6s;
+}
+
+.sponsor img:hover, .sponsor img:active {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* --------------------------------------- */
+
+/* --------------CONTACT----------------- */
+
+/* -------------------------------------- */
+
+.contact-section {
+    background-image: linear-gradient(45deg, rgba(2, 33, 64, 0.9) 55%, rgba(45, 95, 93, 0.9)), url("../images/bg-3.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90vh;
+    padding-left: 7%;
+}
+
+.contact-section .col {
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 60px;
+}
+
+.info {
+    color: white;
+    padding-top: 70px;
+}
+
+.info-detail {
+    padding-right: 30%;
+    line-height: 180%;
+}
+
+.info-detail i {
+    color: #115C77;
+    transition: all .5s;
+    font-size: 120%;
+    margin-right: 2px;
+}
+
+.info-detail i:hover {
+    transform: scale(1.2);
+}
+
+.info .row {
+    margin-left: 15px;
+}
+
+.info .row i {
+    font-size: 250%;
+    margin: 20px 13px 0;
+    color: #CCCCCC;
+    transition: all 0.7s;
+}
+
+.info .row i:hover, .info .row i:active {
+    color: #D35400;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.feedback {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.feedback .row {
+    margin-top: 35px;
+    padding: 0;
+}
+
+.feedback .row .col {
+    margin: 0;
+}
+
+.feedback label {
+    color: white;
+    font-size: 150%;
+    margin-left: 14%;
+}
+
+.feedback input:not(.btn), .feedback textarea {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 2px solid rgb(90, 86, 86);
+    color: white;
+    font-size: 100%;
+    padding-left: 15px;
+    font-family: 'Nunito', sans-serif;
+}
+
+input:focus, textarea:focus{
+    border: none;
+}
+
+.feedback input:not(.btn) {
+    height: 45px;
+}
+
+.feedback textarea {
+    height: 75px;
+    padding-top: 10px;
+    resize: none;
+}
+
+.feedback .btn {
+    width: 60%;
+    margin: 35px auto 50px;
+    margin-left: 20%;
+    border: none;
+}
+
+/* ------------------------------ */
+/* --------FOOTER--------------------- */
+footer{
+    padding: 20px 0;
+    background-color: rgb(56, 56, 56);
+    color: white ;
+    text-align: center;
+    font-size: 110%;
+}

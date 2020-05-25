@@ -1,0 +1,122 @@
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .logo {
+        width: 250px;
+        margin: 40px 0 50px 20px;
+    }
+    .main-nav {
+        margin-top: 60px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+    }
+    .main-nav li {
+        margin-right: 20px;
+    }
+    header .row {
+        width: 100%;
+    }
+    h1 {
+        font-size: 230%;
+    }
+    header .btn {
+        width: 45%;
+    }
+    h3 {
+        font-size: 90%;
+    }
+    .product-detail {
+        width: 95%;
+    }
+    .products-section .box {
+        margin-left: 10%;
+    }
+    .products-section .descript {
+        letter-spacing: 0;
+    }
+    .products-section .box .btn {
+        margin-left: 7%;
+        width: 70%;
+    }
+    .info .row {
+        margin-left: 0;
+    }
+    .feedback .btn {
+        margin: 0px auto 45px;
+        margin-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-nav {
+        visibility: hidden;
+        margin: 0;
+    }
+    .logo {
+        width: 70%;
+        height: 70px;
+        margin: 50px 0px 50px 50px;
+        margin-left: 15%;
+    }
+    h1 {
+        font-size: 250%;
+    }
+    header .row {
+        width: 100%;
+    }
+    .heading-main-box {
+        width: 100%;
+        transform: none;
+        position: unset;
+        top: 0;
+        left: 0;
+        margin-left: 16%;
+    }
+    .heading-main-box .btn {
+        width: 25%;
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    /* --------aboutus-------- */
+    .p-long {
+        width: 70%;
+        font-size: 120%;
+        margin: 20px 0 0 0;
+        margin-left: 15%;
+    }
+    .col:first-child {
+        margin-left: 0;
+    }
+    .about-section .col {
+        clear: both;
+        float: none;
+        margin: 20px auto;
+        margin-left: 18%;
+        width: 70%;
+    }
+    .pic-title {
+        font-size: 160%;
+        font-weight: 600;
+    }
+    .products-section .col {
+        clear: both;
+        float: none;
+        margin: 40px auto;
+        margin-left: 18%;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 220%;
+    }
+}
+
+@media only screen and (max-width: 500px) {}
