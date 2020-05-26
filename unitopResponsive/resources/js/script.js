@@ -23,7 +23,7 @@ $(document).ready(function () {
         $('.hiddenMenu').hide();
     })
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 30) {
+        if ($(this).scrollTop() > 20) {
             $('header').addClass("sticky");
             $('.news-section').css('margin-top', '140px');
             $('.hiddenMenu').css('top', '60px');
