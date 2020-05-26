@@ -23,9 +23,9 @@ $(document).ready(function () {
         $('.hiddenMenu').hide();
     })
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 10) {
+        if ($(this).scrollTop() > 30) {
             $('header').addClass("sticky");
-            $('.news-section').css('margin-top', '200px');
+            $('.news-section').css('margin-top', '140px');
             $('.hiddenMenu').css('top', '60px');
         } else {
             $('header').removeClass('sticky');
