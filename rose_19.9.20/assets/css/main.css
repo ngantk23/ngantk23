@@ -1,0 +1,506 @@
+.website{
+    background: linear-gradient(rgba(20,20,20, 0.7)  , rgba(30,30,30, 0.7) ),url(../img/bg1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.header{
+    height: 110vh;    
+    position: relative;
+}
+.navbar-container{
+    width: 100%;
+}
+.header__navbar{
+    height: 12rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.header-logo{
+    height: 60%;
+    cursor: pointer;
+}
+
+.header__navbar-item{
+    text-decoration: none;
+    margin: 0 2rem;
+    list-style: none;
+    position: relative;
+}
+
+.header__navbar-underline{
+    display: block;
+    height: 3px;
+    background-color: wheat;
+    width: 60%;
+    position: absolute;
+    left: 0px;
+    top: 110%;
+    visibility: hidden;
+}
+
+@keyframes appear2{
+    from{
+        width: 0;
+    }
+    to{
+        width: 60%;
+    }
+}
+
+.header__navbar-item:hover .header__navbar-underline,
+.header__navbar-underline:hover .header__navbar-underline{
+    cursor: pointer;
+    visibility: visible;
+    animation: appear2 ease-in 0.25s;
+}
+
+.header__navbar-link{
+    text-decoration: none;
+    color: wheat;
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* ------menu responsive---- */
+.header__navbar-menu-icon{
+    color: wheat;
+    font-size: 3rem;
+    cursor: pointer;
+    display:none;
+    transition: all .4s;
+}
+
+/* ------- cozy rosie------ */
+.header__intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.header__intro-content{
+    font-family: 'Source Code Pro', monospace;
+    width: 18ch;
+    font-size: 6rem;
+    color: wheat;
+    animation: textTyping 3.4s steps(19) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes textTyping{
+    from{
+        width: 0ch;
+    }
+    to{
+        width: 19ch;
+    }
+}
+
+.header__intro span{
+    display: inline-block;
+    background-color: wheat;
+    width: 5px;
+    height: 6rem;
+    animation: blink 0.35s infinite;
+}
+
+@keyframes blink{
+    0%{
+        background-color: wheat;
+    }
+    49%{
+        background-color: wheat;
+    }
+    50%{
+        background-color: transparent;
+    }
+    99%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: wheat;
+    }
+}
+
+/* ----------sticky navbar------- */
+.sticky-navbar{
+    position: fixed;
+    top:0;
+    right:0; left:0;
+    height: 8rem;
+    background-color: rgba(22, 22, 22,.8);
+    width: 100%;
+    padding: 0 calc((100% - 1200px)/2);
+    animation: stickybar .5s;
+}
+.sticky-navbar .header-logo{
+    height: 70%;
+}
+@keyframes stickybar{
+    form{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------------------------ */
+/* ----------------CONTENT-------------- */
+/* --------------------------------------- */
+
+.content__item:nth-child(odd){
+    background-color:#F4EBDA;
+    box-shadow: 0px 0px 10px wheat;
+    color: black;
+}
+.content__item:nth-child(even){
+    background-color: transparent;
+    color:wheat;
+}
+.content__item{    
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 9rem 0 8rem;
+    /* min-height: 100vh; */
+    position: relative;
+}
+.content:last-child{
+    margin-bottom: 4rem;
+}
+.content-title{
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    letter-spacing: 3px;
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.content-title-light{
+    font-family: 'Ubuntu', sans-serif;
+    color:wheat;
+}
+.content-title-dark{
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+.content-title-line{
+    width: 25rem;
+    height: .6rem;
+    margin-right: 1rem;
+}
+.content-item-main{
+    justify-content: space-between;
+    align-items: center;
+}
+/* -------------- */
+/* -----about---- */
+
+
+.about__info-basic{
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+}
+.about-img{
+    width: 100%;
+    border-radius: 2%;
+}
+.about-sign{
+    position: absolute;
+    width: 17%;height: auto;
+    top: 50%;
+    left:0;
+}
+.about__info-detail{
+    width: 65%;
+}
+.about__info-detail h1{
+    font-size: 3rem;
+}
+.about-detail-text{
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+    width: 100%;
+}
+/* ------------------------ */
+/* -----------Project---------- */
+.project__list{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+.project__item{
+    width: 350px;
+    height:350px;
+    margin-bottom: 75px;
+    perspective: 1000px;
+}
+/* ----- project item flip card---- */
+.project__item-card{
+    width: 100%;
+    height:100%;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1s;
+    border: 1px solid wheat;
+    border-radius: 3px;
+}
+.project__item-card-front, .project__item-card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.project__item-card-front{
+    align-items: flex-end;
+}
+.project__item-card-back{
+    transform: rotateY(180deg);
+    align-items: center;
+}
+.project__item:hover .project__item-card{
+    transform: rotateY(180deg);
+}
+.project__item-name{
+    padding: 3px 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(206, 199, 199, 0.4);
+    font-size: 4rem;
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    transform: translate(0,-15%);
+    background-color: rgba(219, 221, 212, 0.8);
+}
+.project__item-link{
+    display: block;
+    border: 2px solid black;
+    background-color: rgba(243, 223, 184, 0.7);
+    font-size: 2rem;
+    padding: 6px 8px 5px;
+    text-align: center;
+}
+.project__seeMore-link{
+    display: block;
+    border: 2px solid wheat;
+    background-color: transparent;
+    color: wheat;
+    font-size: 2rem;
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.project__seeMore-link:hover{
+    color: white;
+    border-color: white;
+}
+
+/* -----background img for each project item------ */
+.project-named-coachella .project__item-card-front{
+    background-image: url(../img/coachella1.jpeg);
+}
+.project-named-coachella .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/coachella2.jpg);
+}
+  
+.project-named-theAlbum .project__item-card-front{
+    background-image: url(../img/theAlbum2.jpeg);
+}
+.project-named-theAlbum .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/theAlbum1.jpg);
+}
+  
+.project-named-runningMan .project__item-card-front{
+    background-image: url(../img/runningMan1.jpg);
+}
+.project-named-runningMan .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/runningMan2.jpg);
+}
+  
+.project-named-ysl .project__item-card-front{
+    background-image: url(../img/ysl1.jpg);
+}
+.project-named-ysl .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/ysl2.jpg);
+}
+  
+.project-named-wKorea .project__item-card-front{
+    background-image: url(../img/wkorea1.jpg);
+}
+.project-named-wKorea .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/wkorea2.jpg);
+}
+  
+.project-named-amazingSat .project__item-card-front{
+    background-image: url(../img/amazingSat1.jpg);
+}
+.project-named-amazingSat .project__item-card-back{
+    background-image:linear-gradient(rgba(20,20,20, 0.3)  , rgba(30,30,30, 0.3) ), url(../img/amazingSat2.jpg);
+}
+  
+/* ----------------------- */
+/* -------Coworkers-------- */
+.coworker__intro{
+    width: 100%;
+    padding: 4rem 20rem 5rem;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+.coworker__item{
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.coworker__item-img{
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    border: 3px dotted rgb(233, 205, 154);
+}
+.coworker__item-img img{
+    border-radius: 50%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.coworker__item-name{
+    font-size: 2rem;
+}
+.coworker__item-img:hover img{
+    transform:rotate(2deg) scale(1.1);
+}
+
+/* ------------------- */
+/* -----contact------- */
+#contact .content-item-main{
+    align-items: center;
+}
+.contact__info{
+    width: 35%;
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+.contact__info-icon{
+    display: inline-block;
+    width: 5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+.contact__info p{
+    cursor:pointer;
+}
+.contact__info p:hover .contact__info-icon{
+    transform: scale(1.2);
+}
+.contact__info-socialNetwork{
+    width: 80%;
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.contact-network-icon{
+    color: wheat;
+    font-size: 5rem;
+    transition: all .3s;
+}
+.contact-network-icon:hover{
+    transform: scale(1.1);
+}
+/* -----contact form---- */
+.contact__form{
+    margin-top: 5rem;
+    width: 50%;
+    border-radius: 2rem;
+}
+.contact__form-title{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    width: 100%;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+}
+input[type="text"], textarea[type="text"]{
+    width: 100%;
+    border: 1px solid rgb(247, 219, 168);
+    border-radius: 10px;
+    background-color: rgba(245, 222, 179, .6);
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    padding: .7rem;
+    margin: 1rem 0;
+}
+input[type="text"]{
+    height: 5rem;
+}
+textarea{
+    height: 15rem;
+    resize: none;
+}
+input::placeholder,
+textarea::placeholder{
+    color: black;
+    font-size: 2.5rem;
+}
+textarea:focus, input:focus{
+    outline: none;
+    border: 1px solid rgb(218, 184, 122);    
+    background-color: rgba(245, 222, 179, .8);
+}
+input[type="submit"]{
+    border:none;
+    height: 5rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 20px;
+    background-color: wheat;
+    background-size: cover;
+    padding: 2px 4rem;
+    margin-top: 4rem;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: rgb(184, 158, 112);
+    transition: all 0.5s;
+}
+
+
+
+
+/* --------------------- */
+/* ------footer------ */
+.footer{
+    display: flex;
+    height: 6rem;
+    background-color: rgba(32, 31, 31,.8);
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}

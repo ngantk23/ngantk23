@@ -1,0 +1,60 @@
+:root{
+    --white-color: #ffffff;
+    --orange-color: #ca9012;
+}
+
+*{
+    box-sizing: inherit;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* HACK tip: font-size 1.2rem=12px  1.6rem=16px */
+    /* line-height: 1.6rem; */
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width:100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+  
+.clearfix {
+    clear: both;
+    display: block;
+}
+
+.no-margin-right{
+    margin-right: 0 !important;
+}
